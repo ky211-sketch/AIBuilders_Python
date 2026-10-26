@@ -1,3 +1,4 @@
+#Assignment1 
 students = [
     {"name": "Lara",  "age": 23, "track": "AI",   "hours_studied": 40, "scores": [85, 90, 78]},
     {"name": "Omar",  "age": 31, "track": "Data", "hours_studied": 12, "scores": [60, 55, 70]},
@@ -7,11 +8,11 @@ students = [
     {"name": "Sami",  "age": 35, "track": "Data", "hours_studied": 48, "scores": [88, 91, 79]},
 ]
 
-# #Print the name of the first student and the name of the last student
+#Print the name of the first student and the name of the last student
 print(students[0]["name"])
 print(students[-1]["name"])
 
-# #Print Rim's scores.
+#Print Rim's scores.
 
 Rim_record = students[2]
 Rim_score = Rim_record["scores"]
@@ -19,12 +20,12 @@ Rim_score = Rim_record["scores"]
 print(Rim_record)
 print(Rim_score)
 
-# #loop through all students
+#loop through all students
 for student in students :
     print(f'{student["name"]} is {student["age"]} years old and studies {student["track"]}.')
 
 
-# # #Use a loop to build a new list containing only the students in the  AI track
+#Use a loop to build a new list containing only the students in the  AI track
 new_list = []
 for student in students : 
     
@@ -35,27 +36,27 @@ print(f'number of students in AI is {len(new_list)}')
         
 
 
-# # #list comprehension
+#list comprehension
 new_list = [student for student in students if student["track"] == "AI"]
 print(new_list) 
 print(f'number of students in AI is {len(new_list)}')
 
 
-# # #list of the **names** of all students who studied more than 30 hours.
+#list of the **names** of all students who studied more than 30 hours.
 names_list = [student["name"] for student in students if student["hours_studied"] >30]
 print(names_list)
 
-# # # list of students who are older than 24 AND in the AI track
+# list of students who are older than 24 AND in the AI track
 age_track_list = [student for student in students if student["age"] > 24 and student["track"] == "AI"]
 print(age_track_list)
 
 
-# #the average age of all students
+#the average age of all students
 avr_age = sum(student["age"] for student in students)/len(students)
 print(avr_age)
 
 
-# # total hours studied across the whole cohort.
+# total hours studied across the whole cohort.
 total_hrs = sum(student["hours_studied"] for student in students)
 print(total_hrs)
 
